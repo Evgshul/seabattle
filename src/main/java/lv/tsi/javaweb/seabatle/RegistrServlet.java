@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "RegistrServlet", urlPatterns = "/register")// budet reagirovatj na slovo registr
+@WebServlet(name = "RegistrServlet", urlPatterns = "/register")
 public class RegistrServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("player-name");
