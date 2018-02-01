@@ -10,6 +10,7 @@
 <head>
     <meta http-equiv="refresh" content="5">
     <title>Wait - Sea Battle</title>
+    <h4>${playerGameContext.player.name} Plase wait...</h4>
 </head>
 <body>
 
