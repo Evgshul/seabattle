@@ -5,9 +5,12 @@ public class Game {
     private Player player2;
 
     public boolean isComplete() {
-        return player1 !=null && player2 != null;
+        return player1 != null && player2 != null;
     }
 
+    public boolean isReadyToPlay() {
+        return isComplete() && player1.isReady() && player2.isReady();
+    }
     public Player getPlayer1() {
         return player1;
     }
@@ -23,4 +26,6 @@ public class Game {
     public void setPlayer2(Player player2) {
         this.player2 = player2;
     }
+
+
 }

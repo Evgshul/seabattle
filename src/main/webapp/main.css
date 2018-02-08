@@ -6,3 +6,6 @@ H2 {
 P {
     font-weight: bold;
 }
+.container {
+    min-height: 100%;
+}

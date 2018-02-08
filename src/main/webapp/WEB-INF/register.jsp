@@ -24,9 +24,9 @@
 
 <body>
 <div class="bgimg w3-display-container">
-    <div class="w3-display-conteiner conteiner">
+    <div class="w3-display-container container">
         <div class="w3-card-4 w3-display-middle">
-            <div class="w3-conteiner w3-center w3-opacity">
+            <div class="w3-container w3-center w3-opacity">
                 <h2>Registration</h2>
             </div>
             <form class="w3-container w3-center" action="register" method="post">
