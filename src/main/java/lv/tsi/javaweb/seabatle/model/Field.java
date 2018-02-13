@@ -30,4 +30,8 @@ public class Field {
     public boolean IsInvalid() {
         return invalid;
     }
+
+    public void setCell(String addr, CellContent value) {
+        content.put(addr, value);
+    }
 }

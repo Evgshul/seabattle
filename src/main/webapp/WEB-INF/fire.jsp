@@ -9,7 +9,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <meta http-equiv="refresh" content="5">
     <title>Sea Battle</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="main.css">
@@ -45,11 +44,13 @@
 </head>
 <body class="w3-display-container container">
 <div clas="w3-card-4 w3-display-middle">
+
     <c:set var="myField" value="${playerGameContext.player.myField}"/>
     <c:set var="enemyField" value="${playerGameContext.player.enemyField}"/>
 
     <div class="w3-padding">
 
+    <form method="post" class="w3-padding">
 
         <table class="w3-margin">
             <tr>
@@ -82,15 +83,20 @@
                     <td>${row}</td>
                     <c:forEach var="col" items="A,B,C,D,E,F,G,H,I,J">
                         <c:set var="addr" value="${col}${row}"/>
+
                         <td class="${enemyField.getCell(addr)}">
+                            <input type="radio" name="addr" value="${addr}">
                         </td>
                     </c:forEach>
                 </tr>
             </c:forEach>
         </table>
 
+        <div>
+            <input class=" w3-btn w3-round w3-border" type="submit" value="Fire !">
+        </div>
 
-
+    </form>
     </div>
 </div>
 
