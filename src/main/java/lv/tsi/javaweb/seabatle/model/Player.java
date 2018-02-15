@@ -6,6 +6,7 @@ public class Player {
     private Field myField = new Field();
     private Field enemyField = new Field();
     private boolean ready;
+    private boolean winner;
 
 
     public String getName() {
@@ -38,5 +39,13 @@ public class Player {
 
     public void setReady(boolean ready) {
         this.ready = ready;
+    }
+
+    public void setWinner(boolean winner) {
+        this.winner = winner;
+    }
+
+    public boolean isWinner() {
+        return winner;
     }
 }

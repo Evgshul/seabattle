@@ -7,6 +7,14 @@ public class Field {
     private Map<String, CellContent> content = new HashMap<>();
     private boolean invalid;
 
+    /** // documentation
+     * this metod
+     * @return true if there are some ships
+     */
+    public boolean hasMoreShips() {
+        return content.containsValue(CellContent.SHIP); // nashli pervij korablj
+    }
+
     public void setShip(String addr) {
         content.put(addr, CellContent.SHIP);
     }
