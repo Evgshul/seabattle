@@ -36,9 +36,9 @@
     </style>
 </head>
 
-<body class="w3-display-container container">
+<body class="w3-display-container w3-green container">
 
-    <div class="w3-card-4 w3-display-middle">
+<div class="w3-card-4 w3-light-blue w3-display-middle">
     <c:set var="myField" value="${playerGameContext.player.myField}"/>
 
 
@@ -63,15 +63,15 @@
             </c:forEach>
         </table>
 
-        <input class="w3-btn w3-round w3-border" type="submit" value="START !">
+        <input class="w3-btn w3-round w3-border w3-red" type="submit" value="START !">
     </form>
 </div>
 
 <c:if test="${myField.invalid}">
     <div class="w3=display-bottom w3-panel w3-red">
-    <h3>Sorry!</h3>
-    <p>Your ships are not placed correctly. Please check and correct.</p>
+        <h3>Sorry!</h3>
+        <p>Your ships are not placed correctly. Please check and correct.</p>
     </div>
 </c:if>
-    </body>
-    </html>
+</body>
+</html>

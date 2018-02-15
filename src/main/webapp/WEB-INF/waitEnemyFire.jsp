@@ -44,7 +44,7 @@
     </style>
 </head>
 <body class="w3-display-container container">
-<div clas="w3-card-4 w3-display-middle">
+<div class="w3-card-4 w3-display-middle">
     <c:set var="myField" value="${playerGameContext.player.myField}"/>
     <c:set var="enemyField" value="${playerGameContext.player.enemyField}"/>
 
