@@ -36,10 +36,10 @@
         <img src="image/logo1.png" width="80">
     </div>
     <div class="w3-display-middle w3-center">
-        <h1 class="w3-jumbo w3-animate-top w3-text-black">WELCOME TO</h1>
-        <h2 class="w3-xxxLarge w3-animate-bottom w3-text-black">BIG SEA BATTLE</h2>
+        <h1 class="w3-jumbo w3-animate-fading w3-text-black">WELCOME TO</h1>
+        <h2 class="w3-xxxLarge w3-animate-fading w3-text-black">BIG SEA BATTLE</h2>
 
-        <a class="w3-btn w3-light-blue w3-xxlarge  w3-animated-top w3-round-xxlarge w3-text-black" href="register">Start the game</a>
+        <a class="w3-btn w3-light-blue w3-xxlarge  w3-round-xxlarge w3-text-black" href="register">Start the game</a>
     </div>
 
 </div>

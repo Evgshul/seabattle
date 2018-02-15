@@ -35,13 +35,15 @@
         }
     </style>
 </head>
+
 <body class="w3-display-container container">
-    <div clas="w3-card-4 w3-display-middle">
+
+    <div class="w3-card-4 w3-display-middle">
     <c:set var="myField" value="${playerGameContext.player.myField}"/>
 
 
     <form method="post" class="w3-padding">
-        <table class="w3-card-4 w3-display-middle w3-margin">
+        <table class="w3-margin">
             <tr>
                 <c:forEach var="col" items=" ,A,B,C,D,E,F,G,H,I,J">
                     <td>${col}</td>

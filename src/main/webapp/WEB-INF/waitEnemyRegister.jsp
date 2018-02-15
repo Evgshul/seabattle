@@ -24,7 +24,7 @@
         </header>
         <div class="w3-container w3-center w3-text-blue w3-padding">
             <p>
-                <i class="fas fa-spinner fa-5x fa-pulse"></i>
+                <i class="fas fa-cog fa-5x fa-pulse"></i>
             </p>
             <p>
                 <b>Please wait other player to join...</b>
