@@ -22,7 +22,7 @@
         table {
             border-collapse: collapse;
             display: inline-block;
-        }
+                    }
 
         td {
             width: 30px;
@@ -35,6 +35,9 @@
             background-color: darkgrey;
         }
         td.HIT {
+            background-color: yellow;
+        }
+        td.KILL {
             background-color: red;
         }
         td.MISS {

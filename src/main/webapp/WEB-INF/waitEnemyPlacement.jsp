@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: User
@@ -30,7 +31,12 @@
             </p>
         </div>
     </div>
+    <div class="w3-display-bottomright">
+        <p>
+            <a class="w3-btn w3-blue w3-rounder" href="<c:url value='/goodbye'/>">Leave the Game</a>
+        </p>
+    </div>
 </div>
-Please wait opponent...
+
 </body>
 </html>

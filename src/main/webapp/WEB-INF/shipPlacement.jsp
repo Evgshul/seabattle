@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%--
   Created by IntelliJ IDEA.
   User: JavaCourses1
@@ -65,8 +66,13 @@
 
         <input class="w3-btn w3-round w3-border w3-red" type="submit" value="START !">
     </form>
-</div>
+    </div>
 
+<div class="w3-display-bottomright">
+    <p>
+        <a class="w3-btn w3-blue w3-rounder" href="<c:url value='/goodbye'/>">Leave the Game</a>
+    </p>
+</div>
 <c:if test="${myField.invalid}">
     <div class="w3=display-bottom w3-panel w3-red">
         <h3>Sorry!</h3>

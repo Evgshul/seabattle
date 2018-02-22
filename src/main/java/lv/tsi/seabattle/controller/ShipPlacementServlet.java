@@ -1,5 +1,6 @@
 package lv.tsi.seabattle.controller;
 
+import lv.tsi.javaweb.seabatle.model.CellContent;
 import lv.tsi.javaweb.seabatle.model.Field;
 import lv.tsi.javaweb.seabatle.model.Player;
 import lv.tsi.javaweb.seabatle.model.PlayerGameContext;
@@ -28,24 +29,23 @@ public class ShipPlacementServlet extends HttpServlet {
         f.clear();
         if (addresses != null) {
             for (String a : addresses) {
-                f.setShip(a);
+                f.setCell(a, CellContent.SHIP);
             }
         }
         f.validate();
 
-        if (f.IsInvalid()) {
+        if (f.isInvalid()) {
             request.getRequestDispatcher("/WEB-INF/shipPlacement.jsp")
                     .include(request, response);
-        } else
-
-        {
+        } else {
             p.setReady(true);
             response.sendRedirect("waitEnemyPlacement");
         }
     }
-        protected void doGet(HttpServletRequest request, HttpServletResponse response) throws
-        ServletException, IOException {
-            request.getRequestDispatcher("/WEB-INF/shipPlacement.jsp")
-                    .include(request, response);
-        }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws
+            ServletException, IOException {
+        request.getRequestDispatcher("/WEB-INF/shipPlacement.jsp")
+                .include(request, response);
     }
+}

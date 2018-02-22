@@ -1,5 +1,6 @@
 package lv.tsi.seabattle.controller;
 
+import lv.tsi.javaweb.seabatle.model.Game;
 import lv.tsi.javaweb.seabatle.model.PlayerGameContext;
 
 import javax.inject.Inject;
@@ -15,7 +16,6 @@ public class StateFilter implements Filter {
     @Inject
     private PlayerGameContext playerGameContext;
 
-
     public void destroy() {
     }
 
@@ -23,22 +23,26 @@ public class StateFilter implements Filter {
         HttpServletResponse response = (HttpServletResponse) resp; // cast - konstrukcija cast perepisali peremenuju
         HttpServletRequest request = (HttpServletRequest) req;
         String path = request.getServletPath();
-        if (playerGameContext.getGame() == null && !(
-                path.equals("/register")
-                        || path.endsWith(".png")
-                        || path.endsWith(".jsp")
-                        || path.endsWith(".css") // i eto ne zapros na ...
-        )) {
-            response.sendRedirect(request.getContextPath() + "register");// pereadresacija na register
-        } else if (playerGameContext.getGame() != null
-                && playerGameContext.getGame().isCancelled()) {
 
-            request.getSession().invalidate();// nasiljno zavershaem svoju sesiju
+        // *.png, *.jsp, *.css and /register are always accessible
+        if (path.endsWith(".png") || path.endsWith(".jsp") || path.endsWith(".css") || path.endsWith(".jpg")
+                || path.endsWith("/register"))// i eto ne zapros na ...
+                 {
+            chain.doFilter(req, resp);
+            return;
+        }
+
+        Game game = playerGameContext.getGame();
+
+        if (game == null) {
+            response.sendRedirect(request.getContextPath() + "/register");
+        } else if (game.isCancelled()) {
+            request.getSession().invalidate();
             response.sendRedirect(request.getContextPath() + "/index.jsp");
-
         } else {
             chain.doFilter(req, resp);
         }
+
     }
 
     public void init(FilterConfig config) throws ServletException {

@@ -1,4 +1,4 @@
-h2 {
+h2, h1 {
     font-family: "Bookman Old Style";
     font-weight: bold;
 }
@@ -9,3 +9,7 @@ P {
 .container {
     min-height: 100%;
 }
+src {
+    width: auto;
+}
+

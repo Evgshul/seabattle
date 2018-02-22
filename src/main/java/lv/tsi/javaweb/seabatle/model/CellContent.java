@@ -4,5 +4,6 @@ public enum CellContent {
     EMPTY,
     SHIP,
     MISS,
-    HIT
+    HIT,
+    KILL
 }
